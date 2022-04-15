@@ -31,6 +31,8 @@ class Team
       void setCoach_Name (string c) { Coach_Name = c; }
       string getCoach_Name() const { return Coach_Name; }
       void setHome_City (string h) { Home_City = h; }
+      stromg getHome_City() const { return Home_City; }
+      
       
 };
 
