@@ -14,7 +14,7 @@ class Team
     string Coach_Name;
     string Home_City;
     bool Home_Status; 
-    int score; 
+    int Score; 
     int Timeout_Count;
   public:
       Team()
@@ -31,8 +31,13 @@ class Team
       void setCoach_Name (string c) { Coach_Name = c; }
       string getCoach_Name() const { return Coach_Name; }
       void setHome_City (string h) { Home_City = h; }
-      stromg getHome_City() const { return Home_City; }
-      
+      string getHome_City() const { return Home_City; }
+      void setHome_Status (bool s) { Home_Status = s; }
+      bool getHome_Status() const { return Home_Status; }
+      void setScore(int sc) { Score = sc; }
+      int getScore() const { return Score; }
+      void setTimeout_Count(int t) { Timeout_Count = t; }
+      int getTimeout_Count() const { return Timeout_Count; }
       
 };
 
