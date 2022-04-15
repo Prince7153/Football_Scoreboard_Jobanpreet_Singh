@@ -109,12 +109,15 @@ int main()
       system("clear"); //clear the screen of previous content 
       s.showScoreboard(); //show the current scoreboard data
       //menu choices 
-      cout << "A = Update Home Team Name" << endl; 
-      cout << "B = Update Home Team Score" << endl; 
-      cout << "C = Update Home Status" << endl; 
-      cout << "D = Update Visting Team Coach" << endl; 
-      cout << "E = Exit" << endl;
-      cout << ">"; 
+      cout << "A = Update Team 1 Name" << endl; 
+      cout << "B = Update Team 2 Name " << endl; 
+      cout << "C = Update Team 1 Coach Name " << endl; 
+      cout << "D = Update Team 2 Coach Name" << endl; 
+      cout << "E = Update Team 1 City " << endl;
+      cout << "F = Update Team 2 City " << endl;
+      cout << "G = Update Home Status " << endl;
+      cout << "H = Update Team 1 Score " << endl;
+      cout << "I = Update Team 2 Score " << endl;
       cin >> userChoice; 
 
       if(userChoice == "A" || userChoice == "a")
