@@ -77,14 +77,14 @@ class Scoreboard
     void showScoreboard()
     {
       cout << "************************" << endl;
-      cout << "    HOME " << getMinute() << ":" << getSecond() << " VISITOR" <<
-        endl;
+      cout << "  " << Team1.getName() << " " << getMinute() << ":" << getSecond()
+        << " " << Team2.getName() << endl;
       cout << "      " << Team1.getScore() << "         " << Team2.getScore() << 
         endl;
       cout << "         QTR " << getQuarter() << endl;
       cout << "   " << getDown() << " DOWN     TO GO " << getTogo() << endl;
       cout << "************************" << endl;
-      cout << "\n\n\n" ;
+      cout << "\n\n" ;
     }
 };
 
@@ -121,6 +121,7 @@ int main()
       cout << "N = Update Time " << endl;
       cout << "O = Update Quarter " << endl;
       cout << "Z = Exit " << endl;
+      cout << "Your Answer: ";
       cin >> userChoice;     
       if(userChoice == "A" || userChoice == "a") 
       {
@@ -128,18 +129,41 @@ int main()
         cin >> choice;
         tOne.setName(choice);
       }
-      if(userChoice == "B" || userChoice == "b") 
+      else if(userChoice == "B" || userChoice == "b") 
       {
         cout << "\nEnter Team 2 name " << endl;
         cin >> choice;
         tTwo.setName(choice);
+      }
+      else if(userChoice == "C" || userChoice == "c") 
+      {
+        cout << "\nEnter Team 1 Coach Name " << endl;
+        cin >> choice;
+        tOne.setCoach_Name(choice);
+      }
+      else if(userChoice == "D" || userChoice == "d") 
+      {
+        cout << "\nEnter Team 2 Coach Name " << endl;
+        cin >> choice;
+        tTwo.setCoach_Name(choice);
+      }
+      else if(userChoice == "E" || userChoice == "e") 
+      {
+        cout << "\nEnter Team 1 City Name " << endl;
+        cin >> choice;
+        tOne.setHome_City(choice);
+      }
+      else if(userChoice == "F" || userChoice == "f") 
+      {
+        cout << "\nEnter Team 1 City Name " << endl;
+        cin >> choice;
+        tTwo.setHome_City(choice);
       }
       else if(userChoice == "G" || userChoice == "g")
       {
         cout << "\nUpdate Home Status Module" << endl; 
         cout << "\nWho is the home team: 1 = Team 1, 2 = Team 2: "; 
         homeTeamQuestion = validateInt(homeTeamQuestion); 
-        
         if(homeTeamQuestion == 1)
         {
           tOne.setHome_Status(true); 
@@ -154,6 +178,18 @@ int main()
         {
           cout << "\nInvalid Input!" << endl; 
         }
+      }
+      else if(userChoice == "H" || userChoice == "h") 
+      {
+        cout << "\nEnter Team 1 Score " << endl;
+        cin >> newScore;
+        tOne.setScore(newScore);
+      }
+      else if(userChoice == "I" || userChoice == "i") 
+      {
+        cout << "\nEnter Team 2 Score " << endl;
+        cin >> newScore;
+        tTwo.setScore(newScore);
       }
       else if(userChoice == "Z" || userChoice == "z")
       {
