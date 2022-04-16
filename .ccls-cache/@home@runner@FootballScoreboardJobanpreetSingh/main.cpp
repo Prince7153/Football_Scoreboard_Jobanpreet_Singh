@@ -19,7 +19,7 @@ class Team
   public:
       Team()
       {
-        Name = "Dafault"; 
+        Name = "Default"; 
         Coach_Name = "Default";
         Home_City = "Default";
         Home_Status = false;
@@ -48,16 +48,31 @@ class Scoreboard
     int toGo;
     int Quarter;
     int minute;
-    int second; 
-    bool possession;
+    int second;
     Team Team1;
     Team Team2; 
   public: 
     Scoreboard()
     {
-       
+      down = 0;
+      toGo = 0;
+      Quarter = 1;
+      minute = 0;
+      second = 0;
     }  
     void setDown ( int n ) { down = n; }
+    void setTogo ( int n ) { toGo = n; }
+    void setQuarter ( int n ) { Quarter = n; }
+    void setMinute (int n ) { minute = n; }
+    void setSecond (int n ) { second = n; }
+    void setTeam1 ( Team n ) { Team1 = n; }
+    void setTeam2 ( Team n ) { Team2 = n; }
+    int getDown() const { return down; }
+    int getTogo() const { return toGo; }
+    int getQuarter() const { return Quarter; }
+    int getMinute() const { return minute; }
+    Team getTeam1() const { return Team1; }
+    Team getTeam2() const { return Team2; }
     void showScoreboard()
     {
       
@@ -69,14 +84,12 @@ int main()
   Scoreboard s;
   Team tOne;
   Team tTwo; 
-  string newName = ""; 
-  string userChoice = ""; 
-  string newCoachName = ""; 
+  string choice = ""; 
   int homeTeamQuestion = 0; 
   int newScore = 0; 
-  tOne.setHomeStatus(true); 
-  s.setHome(tOne); 
-  s.setVisitor(tTwo); 
+  tOne.setHome_Status(true); 
+  s.setTeam1(tOne); 
+  s.setTeam2(tTwo); 
   do 
   {
       system("clear"); 
@@ -95,6 +108,9 @@ int main()
       cout << "K = Update Team 2 Timeout Count " << endl;
       cout << "L = Update Down Count " << endl;
       cout << "M = Update To Go Count " << endl;
+      cout << "N = Update Time " << endl;
+      cout << "O = Update Quarter " << endl;
+      cout << "Z = Exit " << endl;
       cin >> userChoice; 
 
       setScore(newScore);         
