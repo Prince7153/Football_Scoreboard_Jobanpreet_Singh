@@ -155,7 +155,7 @@ int main()
       }
       else if(userChoice == "F" || userChoice == "f") 
       {
-        cout << "\nEnter Team 1 City Name " << endl;
+        cout << "\nEnter Team 2 City Name " << endl;
         cin >> choice;
         tTwo.setHome_City(choice);
       }
