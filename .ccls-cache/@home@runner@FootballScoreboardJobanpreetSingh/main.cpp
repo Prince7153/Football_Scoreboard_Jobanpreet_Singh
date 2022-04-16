@@ -191,6 +191,45 @@ int main()
         cin >> newScore;
         tTwo.setScore(newScore);
       }
+      else if(userChoice == "J" || userChoice == "j") 
+      {
+        cout << "\nEnter Team 1 Timeout Count " << endl;
+        cin >> newScore;
+        tOne.setTimeout_Count(newScore);
+      }
+      else if(userChoice == "K" || userChoice == "k") 
+      {
+        cout << "\nEnter Team 2 Timeout Count " << endl;
+        cin >> newScore;
+        tTwo.setTimeout_Count(newScore);
+      }
+      else if(userChoice == "L" || userChoice == "l") 
+      {
+        cout << "\nEnter Down Count " << endl;
+        cin >> newScore;
+        s.setDown(newScore);
+      }
+      else if(userChoice == "M" || userChoice == "m") 
+      {
+        cout << "\nEnter To Go Count " << endl;
+        cin >> newScore;
+        s.setTogo(newScore);
+      }
+      else if(userChoice == "N" || userChoice == "n") 
+      {
+        cout << "\nEnter The Minutes " << endl;
+        cin >> newScore;
+        s.setMinute(newScore);
+        cout << "\nEnter The Seconds " << endl;
+        cin >> newScore;
+        s.setSecond(newScore);
+      }
+      else if(userChoice == "O" || userChoice == "o") 
+      {
+        cout << "\nEnter The current Quarter " << endl;
+        cin >> newScore;
+        s.setQuarter(newScore);
+      }
       else if(userChoice == "Z" || userChoice == "z")
       {
         cout << "Exit chosen." << endl; 
