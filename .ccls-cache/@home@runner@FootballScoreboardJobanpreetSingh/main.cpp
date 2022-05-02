@@ -1,6 +1,8 @@
 // Jobanpreet Singh
-// CSE COSC 1437 Dr. T
+// CSE COSC 1437 Dr. T Tarrant County College 
 // 4/15/22
+// Purpose of Assignment : To create a football scoreboard using several classes
+// Skills Gained : Learned more about private, publ
 
 #include <iostream>
 #include <string> 
